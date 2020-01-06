@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Script Tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>HTML5 Audio player with playlist | Script Tutorials</title>
+    <!-- add styles and scripts -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/final.css">
+    <link rel="stylesheet" href="css/music.css">
+
+    <style media="screen">
+      body {
+        background-image: url("image/emirates.jpg");
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="player" style="left: 800px;top: 100px;">
+      <div class="pl"></div>
+      <div class="title"></div>
+      <div class="artist"></div>
+      <div class="cover"></div>
+      <div class="controls">
+        <div class="play"></div>
+        <div class="pause"></div>
+        <div class="rew"></div>
+        <div class="fwd"></div>
+      </div>
+      <div class="volume"></div>
+      <div class="tracker"></div>
+    </div>
+    <ul class="playlist hidden" style="display: block;left: 800px;top: 100px;padding-left: 0px;margin-left: 0px;">
+      <li audiourl="music/kahitna.mp3" cover="anz.jpg" artist="Artist 1">01.mp3</li>
+      <li audiourl="music/yan.wav" cover="anz.jpg" artist="Artist 2">02.wav</li>
+    </ul>
+
+
+  </body>
+
+  <script src="js/music.js"></script>
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</html>

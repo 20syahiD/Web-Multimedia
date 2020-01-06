@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/final.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/navbarimage.css">
+    <link rel="stylesheet" href="css/image.css">
+
+    <style media="screen">
+      body {
+        background-image: url("image/emirates.jpg");
+      }
+    </style>
+  </head>
+
+  <body style="margin-left: 160px;margin-top: 0px;margin-right: 0px;">
+    <button class="tablink" onclick="openPage('normal', this, 'red')" id="defaultOpen">normal</button>
+    <button class="tablink" onclick="openPage('grayscale', this, 'green')">grayscale</button>
+    <button class="tablink" onclick="openPage('invert', this, 'blue')">invert</button>
+    <button class="tablink" onclick="openPage('sepia', this, 'orange')">sepia</button>
+
+
+    <div id="normal" class="tabcontent">
+      <div class="normal" style="margin-left: 300px;">
+        <video controls>
+          <source src="video/citilink.mp4" type="video/mp4">
+            <track default src="video/citilink.mp4" srclang="en" label="engeles kepcen">
+            </track>
+    
+            <track default src="video/citilink.mp4" srclang="en" label="indonesia">
+            </track>
+          </video><br>
+
+        <button id="btnPlay" class="control" style="margin-left: 150px;"> play</button>
+        <button id="btnPaws" class="control"> pause</button>
+        <button id="btnStop" class="control"> stop</button>
+        <button id="btnRew" class="control"> rewind</button>
+        <button id="btnFF" class="control"> fast-forward</button>
+
+      </div>
+    </div>
+
+    <div id="grayscale" class="tabcontent">
+      <div class="grayscale" style="margin-left: 300px;">
+        <video controls>
+          <source src="video/citilink.mp4" type="video/mp4">
+        </video><br>
+
+        <button id="btnPlay" class="control" style="margin-left: 150px;"> play</button>
+        <button id="btnPaws" class="control"> pause</button>
+        <button id="btnStop" class="control"> stop</button>
+        <button id="btnRew" class="control"> rewind</button>
+        <button id="btnFF" class="control"> fast-forward</button>
+      </div>
+    </div>
+
+    <div id="invert" class="tabcontent">
+      <div class="invert" style="margin-left: 300px;">
+        <video controls>
+          <source src="video/citilink.mp4" type="video/mp4">
+        </video><br>
+
+        <button id="btnPlay" class="control" style="margin-left: 150px;"> play</button>
+        <button id="btnPaws" class="control"> pause</button>
+        <button id="btnStop" class="control"> stop</button>
+        <button id="btnRew" class="control"> rewind</button>
+        <button id="btnFF" class="control"> fast-forward</button>
+      </div>
+      </div>
+    </div>
+
+    <div id="sepia" class="tabcontent">
+      <div class="sepia" style="margin-left: 300px;">
+        <video controls>
+          <source src="video/citilink.mp4" type="video/mp4">
+        </video><br>
+
+        <button id="btnPlay" class="control" style="margin-left: 150px;"> play</button>
+        <button id="btnPaws" class="control"> pause</button>
+        <button id="btnStop" class="control"> stop</button>
+        <button id="btnRew" class="control"> rewind</button>
+        <button id="btnFF" class="control"> fast-forward</button>
+      </div>
+      </div>
+    </div>
+
+
+  </body>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/video.js"></script>
+
+</html>

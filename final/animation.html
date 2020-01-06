@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/navbaranimation.css">
+
+    <style media="screen">
+      body {
+        background-image: url("image/emirates.jpg");
+      }
+    </style>
+  </head>
+ <body style="margin-left: 160px;margin-top: 0px;margin-right: 0px;">
+    <button class="tablink" onclick="openPage('flip', this, 'red')">flip</button>
+    <button class="tablink" onclick="openPage('zoom', this, 'green')" id="defaultOpen">zoom</button>
+    <button class="tablink" onclick="openPage('rotate', this, 'blue')">rotate</button>
+
+    <div id="flip" class="tabcontent">
+      <link rel="stylesheet" href="css/flip.css">
+      <img class="flip-scale" src="image/japan.jpg" alt="">
+    </div>
+
+    <div id="zoom" class="tabcontent">
+      <link rel="stylesheet" href="css/zoom.css">
+      <div class="zoomzoom">
+
+      </div>
+    </div>
+
+    <div id="rotate" class="tabcontent">
+      <link rel="stylesheet" href="css/rotate.css">
+      <img class="imagerotate" src="image/qatar.jpg" alt="" width="120" height="120">
+    </div>
+</body>
+<script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</html>

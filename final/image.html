@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/final.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/navbarimage.css">
+    <link rel="stylesheet" href="css/image.css">
+
+    <style media="screen">
+      body {
+        background-image: url("image/emirates.jpg");
+      }
+    </style>
+  </head>
+
+  <body style="margin-left: 160px;margin-top: 0px;margin-right: 0px;">
+    <button class="tablink" onclick="openPage('normal', this, 'red')" id="defaultOpen">normal</button>
+    <button class="tablink" onclick="openPage('grayscale', this, 'green')">grayscale</button>
+    <button class="tablink" onclick="openPage('invert', this, 'blue')">invert</button>
+    <button class="tablink" onclick="openPage('sepia', this, 'orange')">sepia</button>
+
+
+    <div id="normal" class="tabcontent">
+      <div class="normal">
+        <img src="image/anz.jpg">
+      </div>
+    </div>
+
+    <div id="grayscale" class="tabcontent">
+      <div class="grayscale">
+      <img src="image/anz.jpg">
+      <canvas id="canvasgrayscale" width="400" height="400"></canvas>
+      </div>
+    </div>
+
+    <div id="invert" class="tabcontent">
+      <div class="invert">
+      <img src="image/anz.jpg">
+      <canvas id="canvasinvert" width="441" height="441"></canvas>
+      </div>
+    </div>
+
+    <div id="sepia" class="tabcontent">
+      <div class="sepia">
+        <img src="image/anz.jpg">
+      </div>
+    </div>
+
+
+  </body>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/grayscale.js"></script>
+  <script src="js/invert.js"></script>
+  <script src="js/sepia.js"></script>
+
+</html>
